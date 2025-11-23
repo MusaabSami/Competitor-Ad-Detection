@@ -1,0 +1,11 @@
+# Render.com Deployment Configuration
+
+# This file tells Render how to build and run your app
+
+# Build command (runs once during deployment)
+# Installs all Python dependencies
+buildCommand = "pip install -r requirements.txt"
+
+# Start command (runs to start your server)
+# Starts the FastAPI server on the port Render provides
+startCommand = "uvicorn api_server:app --host 0.0.0.0 --port $PORT"
